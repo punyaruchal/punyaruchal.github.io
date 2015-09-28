@@ -5,8 +5,8 @@ description: Punya Ruchal perosnal blog.
 
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://punya.com.np" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username: punyaruchal
+github_username:  punyaruchal
 
 # Build settings
 markdown: kramdown
