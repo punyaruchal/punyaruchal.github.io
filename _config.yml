@@ -3,7 +3,7 @@ title: Punya Ruchal
 email: info@punya.com.np
 description: Punya Ruchal perosnal blog.
 
-baseurl: "/my-site" # the subpath of your site, e.g. /blog/
+baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://punya.com.np" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
