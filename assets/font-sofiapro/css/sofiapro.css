@@ -1,0 +1,35 @@
+/* -------------------------- */
+/* FONT PATH
+/* -------------------------- */
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('../fonts/SofiaProBold.eot');
+  src: url('../fonts/SofiaProBold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/SofiaProBold.woff') format('woff'),
+       url('../fonts/SofiaProBold.ttf') format('truetype'),
+       url('../fonts/SofiaProBold.svg#SofiaProBold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('../fonts/SofiaProRegular.eot');
+  src: url('../fonts/SofiaProRegular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/SofiaProRegular.woff') format('woff'),
+       url('../fonts/SofiaProRegular.ttf') format('truetype'),
+       url('../fonts/SofiaProRegular.svg#SofiaProRegular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('../fonts/SofiaProLight.eot');
+  src: url('../fonts/SofiaProLight.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/SofiaProLight.woff') format('woff'),
+       url('../fonts/SofiaProLight.ttf') format('truetype'),
+       url('../fonts/SofiaProLight.svg#SofiaProRegular') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}

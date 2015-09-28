@@ -1,0 +1,860 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+
+
+// Our variables
+$base-font-family: Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       #111;
+$background-color: #fdfdfd;
+$brand-color:      #2a7ae2;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Width of the content area
+$content-width:    800px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+
+
+// Using media queries with like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+/*----------------------------------*/
+/* Import partials from `sass_dir` (defaults to `_sass`)
+/*----------------------------------*/
+@import
+        "base",
+        "layout",
+        "syntax-highlighting"
+;
+
+/*----------------------------------*/
+/* Define variables
+/*----------------------------------*/
+
+$font: 300 26px/32px 'Sofia Pro', sans-serif;
+$link-color: #1B8BDD;
+$hover-color: #EB7238;
+$text-color: #333333;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font: $font;
+    color: $text-color;
+    margin: 0;
+    padding: 0;
+}
+.clearfix::after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/*----------------------------------*/
+/* STYLE FOR SLIDE MENU
+/*----------------------------------*/
+html {
+  height: 100%;
+}
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+#wrapper {
+  min-height: 100%;
+  position: relative;
+  background: #FFF;
+  margin: 0;
+  -webkit-background-size: cover;
+  background-position: right center;
+  /*  background-image: url(http://cdn.freshome.com/wp-content/uploads/2013/11/Modern-house.jpg);*/
+}
+a {
+  cursor: pointer;
+}
+/* Global Variables 
+***************************************************************/
+/* Heading and buttons */
+/* Secondary headings */
+/* Main text color */
+/* Borders and chevrons */
+/* Secondary page color */
+.border-box {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+}
+/* Element Variables
+   Change @bar-w to adjust entire button size.
+*/
+/* Start Styles - Side Menu 
+***************************************************************/
+.slide {
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  height: 100%;
+  width: 300px;
+}
+.slide ul {
+  list-style-type: none;
+  position: absolute;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  top: 50%;
+  left: 0px;
+  right: 0px;
+  height: auto;
+  text-align: left;
+}
+.slide ul li,
+.slide ul a {
+  display: inline-block;
+  float: left;
+  width: 100%;
+  line-height: 1.4;
+  padding: 0;
+  font-weight: 200;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.slide ul li.menu-label {
+  font-size: 16px;
+  margin: 30px 0 10px 0;
+  text-transform: lowercase;
+}
+.slide ul li.menu-label:first-child {
+  margin-top: 0;
+}
+.slide ul a {
+  font-size: 23px;
+  line-height: 27px;
+  text-transform: uppercase;
+}
+.slide ul li.menu-contacts a {
+  font-size: 16px;
+  text-transform: inherit;
+}
+.slide .ninja-btn {
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  display: inline-block;
+  float: left;
+  cursor: pointer;
+  padding: 25px 20px;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  width: 30px;
+  height: 20.18181818px;
+}
+.slide .ninja-btn span,
+.slide .ninja-btn span:before,
+.slide .ninja-btn span:after {
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  width: 30px;
+  height: 3px;
+}
+.slide .ninja-btn span {
+  position: relative;
+  display: inline-block;
+  float: left;
+  margin-top: 9.09090909px;
+}
+.slide .ninja-btn span:before,
+.slide .ninja-btn span:after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+.slide .ninja-btn span:before {
+  top: -9.09090909px;
+}
+.slide .ninja-btn span:after {
+  top: 9.09090909px;
+}
+.slide .ninja-btn.active span {
+  background-color: transparent;
+}
+.slide .ninja-btn.active span:before,
+.slide .ninja-btn.active span:after {
+  top: 0;
+}
+.slide .ninja-btn.active span:before {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+}
+.slide .ninja-btn.active span:after {
+  -webkit-transition-delay: 0.09s;
+  -moz-transition-delay: 0.09s;
+  -o-transition-delay: 0.09s;
+  -msa-transition-delay: 0.09s;
+  transition-delay: 0.09s;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+}
+/* Panel overlay*/
+.panel-overlay {
+  position: fixed;
+  top: 0;
+  z-index: 9998;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.05)), color-stop(100%, rgba(0, 0, 0, 0.6)));
+  cursor: pointer;
+}
+/* overlay */
+.slide-menu {
+  background-color: #000000;
+  /* ul */
+}
+.slide-menu ul {
+  /* li */
+}
+.slide-menu ul li,
+.slide-menu ul a {
+  color: #5AD29E;
+}
+.slide-menu ul a{
+    border-bottom: 1px solid #333;
+    box-sizing: border-box;
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+}
+.slide-menu ul li:first-child a{
+    border-top: 1px solid #333;
+}
+.slide-menu ul li a:hover,
+.slide-menu ul li.active a {
+  color: #FFB206;
+}
+.slide-menu .ninja-btn {
+  //background-color: #ffffff;
+}
+.slide-menu .ninja-btn span,
+.slide-menu .ninja-btn span:before,
+.slide-menu .ninja-btn span:after {
+  background-color: #ffffff;
+}
+/* panel brand */
+.slide.left {
+  left: -300px;
+}
+.slide.left .ninja-btn {
+  left: 100%;
+}
+/* Panel Left Active */
+.slide.left.active {
+  left: 0;
+}
+.slide.left.active .ninja-btn {
+  left: 100%;
+  margin-left: -90px;
+}
+/* Panel Menu Active */
+.slide.right {
+  right: -450px;
+}
+.slide.right .ninja-btn {
+  right: 100%;
+}
+/* Panel Right Active */
+.slide.right.active {
+  right: 0;
+}
+.slide.right.active .ninja-btn {
+  right: 100%;
+  margin-right: -90px;
+}
+
+/*----------------------------------*/
+/* Style for layout
+/*----------------------------------*/
+.page{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1170px;
+    padding: 0 10px;
+}
+/*----------------------------------*/
+/* Style for slide Menu
+/*----------------------------------*/
+
+#wrapper{
+    position: relative;
+    overflow: hidden;
+    #menu-toggle{
+        display: inline-block;
+        position: fixed;
+        z-index: 100;
+        cursor: pointer;
+        left: 20px;
+        top: 23px;
+        -webkit-transition: all 0.3s ease-in-out 0s;
+        -moz-transition: all 0.3s ease-in-out 0s;
+        -ms-transition: all 0.3s ease-in-out 0s;
+        -o-transition: all 0.3s ease-in-out 0s;
+        transition: all 0.3s ease-in-out 0s;
+    }
+}
+
+/*----------------------------------*/
+/* Style for Header
+/*----------------------------------*/
+.brand{
+    padding: 17px 20px;
+    a.site-title{
+        display: inline-block;
+        font-size: 31px;
+        line-height: 37px;
+        font-weight: 400;
+        color: #ffffff;
+        text-decoration: none;
+        letter-spacing: 0;
+        span{
+            font-weight: 300;
+            color: #5d5c5c;
+        }
+    }
+}
+
+/*----------------------------------*/
+/* Style for content
+/*----------------------------------*/
+#content-wrap{
+    
+}
+h1{
+    font-size: 60px;
+    line-height: 66px;
+    letter-spacing: 14px;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+h2{
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+
+/*----------------------------------*/
+/* Style for layout
+/*----------------------------------*/
+
+section.introduce{
+    background: linear-gradient(270deg, #7eb759, #1ba176, #3666a8, #7b3a88, #af0a58, #da0a35, #e37d21, #f1b62a);
+    background-size: 1600% 1600%;
+
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    -o-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+
+    @-webkit-keyframes AnimationName {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+    @-moz-keyframes AnimationName {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+    @-o-keyframes AnimationName {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+    @keyframes AnimationName { 
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+
+    color: #ffffff;
+    padding-top: 1px;
+    box-sizing: border-box;
+
+    .inner-sec{
+        margin: 25vh 0;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    p{
+        font-size: 1rem;
+        line-height: 24px;
+        font-weight: bold;
+        letter-spacing: 7px;
+        margin-bottom: 20px;
+    }
+    h1.name{
+        font-size: 160px;
+        font-weight: bold;
+        letter-spacing: 40px;
+        line-height: 145px;
+        margin-bottom: 20px;
+        text-indent: 40px;
+        margin: 0;
+        -webkit-transition: all 0.4s ease-in-out 0s;
+        -moz-transition: all 0.4s ease-in-out 0s;
+        -ms-transition: all 0.4s ease-in-out 0s;
+        -o-transition: all 0.4s ease-in-out 0s;
+        transition: all 0.4s ease-in-out 0s;
+    }
+    .more{
+        margin-top: 50px;
+        a.button{
+            background: transparent none repeat scroll 0 0;
+            border: 1px solid #fff;
+            border-radius: 50px;
+            display: inline-block;
+            color: #fff;
+            display: inline-block;
+            font-size: 12px;
+            line-height: 18px;
+            letter-spacing: 4px;
+            padding: 20px 30px;
+            text-decoration: none;
+            text-transform: uppercase;
+            cursor: pointer;
+            -webkit-transition: all 0.4s ease-in-out 0s;
+            -moz-transition: all 0.4s ease-in-out 0s;
+            -ms-transition: all 0.4s ease-in-out 0s;
+            -o-transition: all 0.4s ease-in-out 0s;
+            transition: all 0.4s ease-in-out 0s;
+            &:hover{
+                background: #fff none repeat scroll 0 0;
+                color: #000;
+                padding: 20px 40px;
+            }
+        }
+    }
+}
+
+section.about{
+    background: rgba(0, 0, 0, 0) url("/my-site/images/punya.jpg") no-repeat scroll center center / cover ;
+    background-attachment: fixed;
+
+    
+    // background-image: url("../images/index.png"), url("../images/punya.jpg");
+    // background-attachment: fixed, fixed;
+    // background-size: auto, cover; 
+
+    .text-sec{
+        float: left;
+        margin: 25vh 0;
+        width: 45%;
+        color: #333333;
+        p{
+            font-size: 21px;
+            font-weight: 300;
+            line-height: 27px;
+            //text-align: justify;
+        }
+        .social-link{
+            margin-top: 40px;
+            a{
+                background: #2bceeb none repeat scroll 0 0 padding-box;
+                border-radius: 50%;
+                display: inline-block;
+                float: left;
+                height: 48px;
+                margin-right: 8px;
+                text-align: center;
+                width: 48px;
+                -webkit-transition: all 0.4s ease-in-out 0s;
+                -moz-transition: all 0.4s ease-in-out 0s;
+                -ms-transition: all 0.4s ease-in-out 0s;
+                -o-transition: all 0.4s ease-in-out 0s;
+                transition: all 0.4s ease-in-out 0s;
+                .fa:before{
+                    display: inline-block;
+                    font-size: 26px;
+                    padding: 0;
+                    text-align: center;
+                    color: #ffffff;
+                    box-sizing: border-box;
+                    padding-top: 10px;
+                }
+                &:hover{
+                    margin-top: -10px;
+                    box-shadow: 0 7px 10px #747474;
+                }
+            }
+        }
+    }
+}
+
+section.what-i-do{
+    background: rgba(0, 0, 0, 0) url("/my-site/images/computer_tablet.jpg") no-repeat scroll center center / cover ;
+    background-attachment: fixed;
+    //background: rgba(0, 0, 0, 0) radial-gradient(ellipse at center center , #35414c 0px, #1c2024 80%) repeat scroll 0 0;
+    color: #89939b;
+    .inner-sec{
+        color: #ffffff;
+        padding: 20vh 0;
+        h1{
+            color: #ffffff;
+            text-align: center;
+        }
+        .flex-wrapper{
+            width: 100%;
+            .block{
+                background: rgba(25, 27, 30, 0.6) none repeat scroll 0 0;
+                box-sizing: border-box;
+                box-shadow: 0 0 15px 0 rgba(255, 255, 255, 0.5);
+                float: left;
+                margin-right: 20px;
+                padding: 30px;
+                width: 32%;
+                transition: all 0.3s ease-in-out 0s;
+                min-height: 430px;
+                h2{
+                    letter-spacing: 1px;
+                    font-size: 25px;
+                    line-height: 31px;
+                    margin-bottom: 25px;
+                    padding-top: 100px;
+                    text-align: center;
+                    text-transform: capitalize;
+                    font-weight: 300;
+                }
+                &:hover{
+                    transform: scale(1.1);
+                }
+                &:first-child{
+                    //background: rgba(240, 98, 146, 0.7)
+                    h2{
+                        background: url("/my-site/images/ux-icon.png") no-repeat center top; 
+                    }
+                }
+                &:nth-child(2){
+                    //background: rgba(150, 117, 206, 0.7)
+                    h2{
+                        background: url("/my-site/images/web-icon.png") no-repeat center 10px; 
+                    }
+                }
+                &:nth-child(3){
+                    //background: rgba(77, 208, 226, 0.7)
+                    margin-right: 0;
+                    h2{
+                        background: url("/my-site/images/cms-icon.png") no-repeat center top; 
+                    }
+                }
+                p{
+                    font-size: 18px;
+                    line-height: 24px;
+                }
+                ul{
+                    margin: 0;
+                    padding: 0;
+                   li{
+                    font-size: 18px;
+                    line-height: 24px;
+                    margin-bottom: 5px;
+                    text-align: center;
+                    list-style: none;
+                   } 
+                }
+            }
+        } 
+    }
+}
+
+
+/*----------------------------------*/
+/* Style for footer
+/*----------------------------------*/
+.footer{
+    background: #3F4957;
+    .inner-sec{
+        padding: 50px 0;
+        text-align: center;
+        a{
+            color: #5ad29e;
+            text-decoration: none;
+            &:hover{
+                color: #ffb206;
+            }
+        }
+        .email{
+            font-size: 50px;
+            line-height: 56px;
+            margin-bottom: 30px;
+        }
+        .social-link{
+            a{
+                display: inline-block;
+                font-size: 45px;
+                margin: 0 10px;
+            }
+        }
+    }
+}
+
+
+
+/*----------------------------------*/
+/* Style for layout
+/*----------------------------------*/
+@media all and (max-width: 1024px){
+    .about, 
+    .what-i-do{
+        height: auto!important;
+    }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+
+    section.about{
+        .text-sec{
+            width: 55%;
+            h1{
+                font-size: 50px;
+                line-height: 56px;
+                margin-bottom: 10px;
+            }
+            p{
+                font-size: 21px;
+                line-height: 27px;
+            }
+        }
+    }
+
+    section.what-i-do{
+        .inner-sec{                
+            .flex-wrapper{
+                .block{
+                    width: 49.2%;
+                    margin: 0 10px 10px 0;
+                    &:nth-child(2n){
+                        margin-right: 0;
+                    }
+                    &:nth-child(3){
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 768px){
+    
+    section.about{
+
+        .text-sec{
+
+            .social-link{
+                margin-top: 10px;
+                a{
+                    height: 40px;
+                    width: 40px;
+                    .fa:before{
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    } 
+
+    section.what-i-do{
+        .inner-sec{ 
+            padding: 5vh 0;               
+            .flex-wrapper{
+
+                .block{
+                    float: none;
+                    margin-bottom: 10px;
+                    min-height: auto;
+                    width: 100%;
+                    &:hover{
+                        transform: scale(1);
+                    }
+                }
+            } 
+        }
+    }
+}
+
+
+@media all and (min-width:480px) and (max-width: 768px){
+
+    section.introduce h1.name{
+        font-size: 80px;
+        letter-spacing: 15px;
+        line-height: 80px;
+        text-indent: 15px;
+    }
+    h1{
+        font-size: 8vw;
+        letter-spacing: 1vw;
+        margin-bottom: 10px;
+    }
+    section.about .text-sec {
+        float: left;
+        margin: 10vh 0;
+        width: 72%;
+        p{
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+
+    .footer{
+        .inner-sec{
+            .email{
+                font-size: 41px;
+                line-height: 47px;
+                margin-bottom: 30px;
+            }
+            .social-link{
+                a{
+                    font-size: 35px;
+                    margin: 0 5px;
+                }
+            }
+        }
+    }
+}
+
+@media all and (min-width: 320px) and (max-width: 480px){
+    .footer{
+        .inner-sec{
+            .email{
+                font-size: 29px;
+                line-height: 35px;
+                margin-bottom: 30px;
+            }
+            .social-link{
+                a{
+                    font-size: 35px;
+                    margin: 0 5px;
+                }
+            }
+        }
+    }
+}
+
+@media all and (min-width: 240px) and (max-width: 480px){
+
+    section.introduce h1.name{
+        font-size: 50px;
+        letter-spacing: 10px;
+        line-height: 56px;
+        text-indent: 15px;
+    }
+    section.introduce p{
+        letter-spacing: 5px;
+    }
+    h1{
+        font-size: 8vw;
+        letter-spacing: 2vw;
+        text-indent: 2vw;
+        margin-bottom: 10px;
+    }
+    section.about .text-sec {
+        float: left;
+        margin: 10vh 0;
+        width: 100%;
+        p{
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+}
+
+@media all and (max-width: 320px){
+    .footer{
+        .inner-sec{
+            .email{
+                font-size: 22px;
+                line-height: 28px;
+                margin-bottom: 30px;
+            }
+            .social-link{
+                a{
+                    font-size: 35px;
+                    margin: 0 5px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1366px) , screen and (max-height: 768px) {
+    section.what-i-do .inner-sec{
+       padding: 10vh 0;
+    }
+}
