@@ -595,7 +595,7 @@ section.what-i-do{
                 &:first-child{
                     //background: rgba(240, 98, 146, 0.7)
                     h2{
-                        background: url("/images/ux-icon.png") no-repeat center top; 
+                        background: url("/images/ux-icon.png") no-repeat center top;
                     }
                 }
                 &:nth-child(2){
@@ -856,4 +856,32 @@ section.what-i-do{
     section.what-i-do .inner-sec{
        padding: 10vh 0;
     }
+}
+
+/*----------------------------------*/
+/* Style for Retina Diplay
+/*----------------------------------*/
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+
+    section.what-i-do .inner-sec .flex-wrapper .block{
+        &:first-child h2{
+            background: url("/images/ux-icon-2x.png") no-repeat center top;
+            background-size: 91px;
+        }
+        &:nth-child(2) h2{
+            background: url("/images/web-icon-2x.png") no-repeat center 10px;
+            background-size: 131px;
+        }
+        &:nth-child(3) h2{
+            background: url("/images/cms-icon-2x.png") no-repeat center top;
+            background-size: 91px;
+        }
+    }
+
 }
