@@ -674,20 +674,19 @@ section.what-i-do{
     }
 
     section.what-i-do{
-        .inner-sec{                
-            .flex-wrapper{
-                .block{
-                    width: 49.2%;
-                    margin: 0 10px 10px 0;
-                    &:nth-child(2n){
-                        margin-right: 0;
-                    }
-                    &:nth-child(3){
-                        margin-right: 10px;
+        
+        .flex-wrapper{
+            .skill-item{
+                width: 48%;
+                margin-bottom: 0.5em;
+                .skill-item-text{
+                    min-height: 190px;
+                    &:hover{
+                        transform: scale(1);
                     }
                 }
             }
-        }
+        }   
     }
 }
 
@@ -711,21 +710,20 @@ section.what-i-do{
     } 
 
     section.what-i-do{
-        .inner-sec{ 
-            padding: 5vh 0;               
-            .flex-wrapper{
-
-                .block{
-                    float: none;
-                    margin-bottom: 10px;
+        padding: 1em 0 0;           
+        .flex-wrapper{
+            .skill-item{
+                float: none;
+                width: 100%;
+                margin-bottom: 0.5em;
+                .skill-item-text{
                     min-height: auto;
-                    width: 100%;
                     &:hover{
                         transform: scale(1);
                     }
                 }
-            } 
-        }
+            }
+        }   
     }
 }
 
@@ -739,8 +737,7 @@ section.what-i-do{
         text-indent: 15px;
     }
     h1{
-        font-size: 8vw;
-        letter-spacing: 1vw;
+        font-size: 10vw;
         margin-bottom: 10px;
     }
     section.about .text-sec {
@@ -800,8 +797,7 @@ section.what-i-do{
         letter-spacing: 5px;
     }
     h1{
-        font-size: 8vw;
-        letter-spacing: 2vw;
+        font-size: 13vw;
         text-indent: 2vw;
         margin-bottom: 10px;
     }
