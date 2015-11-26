@@ -9,7 +9,7 @@ $(document).ready(function(){
 
 	//Auto row height with viewing screen
 	$(window).resize(function() {
-    	$('.introduce,.about,.what-i-do,.slide-menu').height($(window).height());
+    	$('.introduce, .slide-menu').height($(window).height());
 	});
 	$(window).trigger('resize');
 

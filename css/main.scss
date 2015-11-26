@@ -394,18 +394,13 @@ a {
 h1{
     font-size: 60px;
     line-height: 66px;
-    letter-spacing: 14px;
-    text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 300;
     margin-bottom: 50px;
 }
 h2{
-    font-size: 30px;
-    line-height: 36px;
-    letter-spacing: 5px;
-    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 30px;
     font-weight: 400;
-    margin-bottom: 50px;
 }
 
 /*----------------------------------*/
@@ -556,79 +551,66 @@ section.about{
 }
 
 section.what-i-do{
-    background: rgba(0, 0, 0, 0) url("/images/computer_tablet.jpg") no-repeat scroll center center / cover ;
-    background-attachment: fixed;
-    //background: rgba(0, 0, 0, 0) radial-gradient(ellipse at center center , #35414c 0px, #1c2024 80%) repeat scroll 0 0;
-    color: #89939b;
-    .inner-sec{
+    background-image: radial-gradient(49% 146%, #a58df0 24%, #6c44ef 100%);
+    padding: 3em 0 2.5em;
+    h1{
         color: #ffffff;
-        padding: 20vh 0;
-        h1{
-            color: #ffffff;
-            text-align: center;
-        }
-        .flex-wrapper{
-            width: 100%;
-            .block{
-                background: rgba(25, 27, 30, 0.6) none repeat scroll 0 0;
-                box-sizing: border-box;
-                box-shadow: 0 0 15px 0 rgba(255, 255, 255, 0.5);
-                float: left;
-                margin-right: 20px;
-                padding: 30px;
-                width: 32%;
+        text-align: center;
+    }
+    .flex-wrapper{
+
+        .skill-item{
+            float: left;
+            margin: 0 2% 1em 0;
+            width: 31%;
+            .skill-item-text{
+                background: rgba(255, 255, 255, 0.08);
+                padding: 1em 1em 1em 3.2em;
+                color: #ffffff;
+                cursor: pointer;
+                min-height: 210px;
                 transition: all 0.3s ease-in-out 0s;
-                min-height: 430px;
-                h2{
-                    letter-spacing: 1px;
-                    font-size: 25px;
-                    line-height: 31px;
-                    margin-bottom: 25px;
-                    padding-top: 100px;
-                    text-align: center;
-                    text-transform: capitalize;
-                    font-weight: 300;
+
+                &:nth-child(3n+1) {
+                    clear: left;
                 }
                 &:hover{
                     transform: scale(1.1);
                 }
-                &:first-child{
-                    //background: rgba(240, 98, 146, 0.7)
-                    h2{
-                        background: url("/images/ux-icon.png") no-repeat center top;
-                    }
-                }
-                &:nth-child(2){
-                    //background: rgba(150, 117, 206, 0.7)
-                    h2{
-                        background: url("/images/web-icon.png") no-repeat center 10px; 
-                    }
-                }
-                &:nth-child(3){
-                    //background: rgba(77, 208, 226, 0.7)
-                    margin-right: 0;
-                    h2{
-                        background: url("/images/cms-icon.png") no-repeat center top; 
-                    }
+
+                h2{
+                    font-size: 24px;
+                    line-height: 30px;
+                    margin-bottom: 12px;
+                    font-weight: 400;
                 }
                 p{
-                    font-size: 18px;
-                    line-height: 24px;
-                }
-                ul{
-                    margin: 0;
-                    padding: 0;
-                   li{
-                    font-size: 18px;
-                    line-height: 24px;
-                    margin-bottom: 5px;
-                    text-align: center;
-                    list-style: none;
-                   } 
+                    font-size: 14px;
+                    line-height: 20px;
+                    font-weight: 300;
+                    margin-bottom: 0;
                 }
             }
-        } 
-    }
+            &:first-child .skill-item-text{
+                background: rgba(255, 255, 255, 0.08) url("/images/ux-ui-icon.png") no-repeat 25px 30px;
+            }
+            &:nth-child(2) .skill-item-text{
+                background: rgba(255, 255, 255, 0.08) url("/images/frontend-icon.png") no-repeat 20px 30px;
+            }
+            &:nth-child(3) .skill-item-text{
+                background: rgba(255, 255, 255, 0.08) url("/images/cms-drupal-icon.png") no-repeat 20px 30px;
+            }
+            &:nth-child(4) .skill-item-text{
+                background: rgba(255, 255, 255, 0.08) url("/images/tools-icon.png") no-repeat 25px 30px;
+            }
+            &:nth-child(5) .skill-item-text{
+                background: rgba(255, 255, 255, 0.08) url("/images/git-icon.png") no-repeat 20px 30px;
+            }
+            &:nth-child(6) .skill-item-text{
+                background: rgba(255, 255, 255, 0.08) url("/images/knowledge-icon.png") no-repeat 25px 30px;
+            }
+        }
+    } 
 }
 
 
@@ -869,19 +851,30 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) { 
 
-    section.what-i-do .inner-sec .flex-wrapper .block{
-        &:first-child h2{
-            background: url("/images/ux-icon-2x.png") no-repeat center top;
-            background-size: 91px;
+    section.what-i-do .inner-sec .flex-wrapper .skill-item{
+        &:first-child .skill-item-text{
+            background: rgba(255, 255, 255, 0.08) url("/images/ux-ui-icon-2x.png") no-repeat 25px 30px;
+            background-size: 40px;
         }
-        &:nth-child(2) h2{
-            background: url("/images/web-icon-2x.png") no-repeat center 10px;
-            background-size: 131px;
+        &:nth-child(2) .skill-item-text{
+            background: rgba(255, 255, 255, 0.08) url("/images/frontend-icon.png-2x.png") no-repeat 25px 30px;
+            background-size: 55px;
         }
-        &:nth-child(3) h2{
-            background: url("/images/cms-icon-2x.png") no-repeat center top;
-            background-size: 91px;
+        &:nth-child(3) .skill-item-text{
+            background: rgba(255, 255, 255, 0.08) url("/images/cms-drupal-icon-2x.png") no-repeat 25px 30px;
+            background-size: 52px;
+        }
+        &:nth-child(4) .skill-item-text{
+            background: rgba(255, 255, 255, 0.08) url("/images/tools-icon-2x.png") no-repeat 25px 30px;
+            background-size: 40px;
+        }
+        &:nth-child(5) .skill-item-text{
+            background: rgba(255, 255, 255, 0.08) url("/images/git-icon-2x.png") no-repeat 25px 30px;
+            background-size: 58px;
+        }
+        &:nth-child(6) .skill-item-text{
+            background: rgba(255, 255, 255, 0.08) url("/images/knowledge-icon-2x.png") no-repeat 25px 30px;
+            background-size: 40px;
         }
     }
-
 }
