@@ -1,0 +1,25 @@
+<section class="portfolio" data-scroll-index="3">
+	<div class="page">
+		<h1 class="page-title">My Works</h1>
+		<div class="portfolio-content clearfix">
+			{% for post in site.categories.portfolio %} 
+	        <div class="item">
+	            <div class="thumb-img">
+					{% if post.image.thumb %}
+						<img src="{{ site.url }}/images/{{ post.image.thumb }}">
+					{% endif %} 
+	            </div>
+
+	            <div class="info">
+					<a href="{{ post.link }}" target="_blank">
+						<div class="info-item">
+							<span class="category">{{ post.categories }}</span>
+							<span class="title">{{ post.title }}</span>
+						</div>
+					</a>
+				</div>
+	        </div>
+	        {% endfor %}
+		</div><!--End portfolio-content-->
+	</div>
+</section>

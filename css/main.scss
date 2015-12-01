@@ -394,7 +394,7 @@ a {
 h1{
     font-size: 60px;
     line-height: 66px;
-    font-weight: 300;
+    font-weight: 400;
     margin-bottom: 50px;
 }
 h2{
@@ -498,8 +498,18 @@ section.introduce{
 }
 
 section.about{
-    background: rgba(0, 0, 0, 0) url("/images/punya.jpg") no-repeat scroll center center / cover ;
-    background-attachment: fixed;
+    //background: rgba(0, 0, 0, 0) url("/images/punya.jpg") no-repeat scroll center center / cover ;
+    //background-attachment: fixed;
+    //background: linear-gradient(to right, rgba(51,34,139,1) 0%, rgba(101,91,169,1) 100%);
+
+    background-attachment: scroll, scroll;
+    background-clip: border-box, border-box;
+    background-color: #000;
+    background-image: linear-gradient(to right, rgba(51,34,139,0.9) 0%, rgba(101,91,169,0.6) 100%), url("/images/punya.jpg");
+    background-origin: padding-box, padding-box;
+    background-position: 0 0%, center center;
+    background-repeat: repeat, no-repeat;
+    background-size: cover;
     
     // background-image: url("../images/index.png"), url("../images/punya.jpg");
     // background-attachment: fixed, fixed;
@@ -509,7 +519,7 @@ section.about{
         float: left;
         margin: 25vh 0;
         width: 45%;
-        color: #333333;
+        color: #ffffff;
         p{
             font-size: 21px;
             font-weight: 300;
@@ -551,9 +561,18 @@ section.about{
 }
 
 section.what-i-do{
-    background-image: radial-gradient(49% 146%, #a58df0 24%, #6c44ef 100%);
+    //background-image: radial-gradient(49% 146%, #a58df0 24%, #6c44ef 100%);
     padding: 3em 0 2.5em;
     transition: all 0.3s ease-in-out 0s;
+
+    background: rgba(166,141,240,1);
+    background: -moz-radial-gradient(center, ellipse cover, rgba(166,141,240,1) 0%, rgba(108,68,239,1) 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(166,141,240,1)), color-stop(100%, rgba(108,68,239,1)));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(166,141,240,1) 0%, rgba(108,68,239,1) 100%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(166,141,240,1) 0%, rgba(108,68,239,1) 100%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(166,141,240,1) 0%, rgba(108,68,239,1) 100%);
+    background: radial-gradient(ellipse at center, rgba(166,141,240,1) 0%, rgba(108,68,239,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a68df0', endColorstr='#6c44ef', GradientType=1 );
     h1{
         color: #ffffff;
         text-align: center;
@@ -563,7 +582,10 @@ section.what-i-do{
         .skill-item{
             float: left;
             margin: 0 2% 1em 0;
-            width: 31%;
+            width: 32%;
+            &:nth-child(3n){
+                margin-right: 0;
+            } 
             .skill-item-text{
                 background: rgba(255, 255, 255, 0.08);
                 padding: 1em 1em 1em 3.2em;
@@ -614,20 +636,128 @@ section.what-i-do{
     } 
 }
 
+/*----------------------------------*/
+/* Style for Portfolio
+/*----------------------------------*/
+section.portfolio{
+    background: #00c0d5;
+    padding: 3em 0;
+    transition: all 0.3s ease-in-out 0s;
+    .page{
+        max-width: 1170px;
+    }
+    h1{
+        text-align: center;
+        color: #ffffff;
+    }
+    .portfolio-content{
+        display: flex;
+        flex-wrap: wrap;
+        .item{
+            background-color: #49bdff;
+            width: 33.3333%;
+            position: relative;
+
+            backface-visibility: hidden;
+            overflow: hidden;
+            transform: translateZ(0px) scale(1, 1);
+            &:after{
+                background-color: inherit;
+                content: "";
+                opacity: 0.9;
+                transform: scale(2) translateX(-100%) translateY(-100%) translateZ(0px) rotate(-45deg);
+                transition: transform 3s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+
+                height: 100%;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 100%;
+            }
+            &:hover:after{
+                transform: scale(2) rotate(-45deg) translateZ(0px);
+                transition-duration: 1s;
+            }
+            &:hover .info{
+                opacity: 1;
+                transform: translateY(0px) translateZ(0px);
+                transition-delay: 0.25s;
+                transition-duration: 0.75s;
+            }
+            &:hover .thumb-img img{
+                transform: scale(1.5);
+            }
+            .thumb-img{
+                height: 100%;
+                width: 100%;
+                img{
+                    transition: all 0.3s ease-in-out 0s;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+            .info{
+                opacity: 0;
+                transform: translateY(-40px) translateZ(0px);
+                transition: opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0s, transform 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+                z-index: 1;
+
+                height: 100%;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                a{
+                    height: 100%;
+                    left: 0;
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                    outline: none;
+                    .info-item{
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        text-align: center;
+                        top: 33%;
+                        padding: 20px;
+                        span{
+                            display: block;
+                            color: #ffffff;
+                        }
+                        span.category{
+                            text-transform: uppercase;
+                            font-size: 16px;
+                            line-height: 22px;
+                        }
+                        span.tile{
+                            display: block;
+                            font-size: 24px;
+                            font-weight: 400;
+                            line-height: 30px;
+                            margin-bottom: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 /*----------------------------------*/
 /* Style for footer
 /*----------------------------------*/
 .footer{
-    background: #3F4957;
+    background: #e24040;
     .inner-sec{
         padding: 50px 0;
         text-align: center;
         a{
-            color: #5ad29e;
+            color: #ffffff;
             text-decoration: none;
             &:hover{
-                color: #ffb206;
+                color: #333333;
             }
         }
         .email{
@@ -672,11 +802,19 @@ section.what-i-do{
     }
 
     section.what-i-do{
-        
         .flex-wrapper{
             .skill-item{
-                width: 48%;
+                width: 49%;
                 margin-bottom: 0.5em;
+                &:nth-child(2n){
+                    margin-right: 0;
+                }
+                &:nth-child(3n){
+                    margin-right: 2%;
+                }
+                &:last-child{
+                    margin-right: 0;
+                }
                 .skill-item-text{
                     min-height: 190px;
                     &:hover{
@@ -723,6 +861,14 @@ section.what-i-do{
             }
         }   
     }
+    section.portfolio{
+        padding: 1em 0 10px;
+        .portfolio-content{
+            .item{
+                    
+            }
+        }
+    }
 }
 
 
@@ -745,6 +891,14 @@ section.what-i-do{
         p{
             font-size: 18px;
             line-height: 24px;
+        }
+    }
+
+    section.portfolio{
+        .portfolio-content{
+            .item{
+                width: 50%;       
+            }
         }
     }
 
@@ -778,6 +932,17 @@ section.what-i-do{
                     font-size: 35px;
                     margin: 0 5px;
                 }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 480px){
+    section.portfolio{
+        padding-top: 1em;
+        .portfolio-content{
+            .item{
+                width: 100%;       
             }
         }
     }

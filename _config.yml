@@ -4,7 +4,9 @@ email: info@punya.com.np
 description: Punya Ruchal perosnal blog.
 
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://punya.com.np" # the base hostname & protocol for your site
+url: "http://punya.com.np" # the base hostname & protocol for your live site
+#url: "" # the base hostname & protocol for your local site
+encoding:         UTF-8
 twitter_username: punyaruchal
 github_username:  punyaruchal
 

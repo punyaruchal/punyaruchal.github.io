@@ -1,0 +1,23 @@
+<section class="portfolio" data-scroll-index="3">
+	<div class="page">
+		<h1 class="page-title">My Works</h1>
+		<div class="portfolio-content">
+			{% for post in site.categories.portfolio %} 
+	        <article>
+	        	<div class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
+		            <div class="link-article">
+						{% if post.image.thumb %}
+							<img src="{{ site.url }}/images/{{ post.image.thumb }}">
+							<div class="info">
+								<a href="{{ site.url }}{{ post.url }}" class="button work-btn view-btn"><span class="see-work">View project</span><span class="progress"></span></a>
+							</div>
+						{% endif %} 
+		            </div>
+		            <h3 class="portfolio-title"><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h3>
+		            </a>
+	            </div>
+	        </article>
+	        {% endfor %}
+		</div><!--End portfolio-content-->
+	</div>
+</section>
