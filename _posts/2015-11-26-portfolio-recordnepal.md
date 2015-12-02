@@ -9,5 +9,5 @@ comments: 		false
 categories: 	portfolio
 link:			http://recordnepal.com/
 image:
-  thumb: portfolio/thumbnails/record-nepal.jpg
+  thumb: portfolio/thumbnails/the-record.png
 ---
