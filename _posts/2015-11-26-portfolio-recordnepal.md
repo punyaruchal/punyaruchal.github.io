@@ -4,7 +4,7 @@ title:  		"Record Nepal"
 impact: 		""
 description: 	""
 modified:   	2015-11-26
-tags: 			[News, News Portal]
+tags: 			[News Portal]
 comments: 		false
 categories: 	portfolio
 link:			http://recordnepal.com/

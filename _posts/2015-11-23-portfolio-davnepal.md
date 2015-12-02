@@ -4,7 +4,7 @@ title:  		"Discover and Volunteer Nepal"
 impact: 		""
 description: 	""
 modified:   	2015-11-23
-tags: 			[Website, Volunteer]
+tags: 			[Travel]
 comments: 		false
 categories: 	portfolio
 link:			http://davnepal.org/

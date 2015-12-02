@@ -4,7 +4,7 @@ title:  		"Tharu 20 for 7"
 impact: 		""
 description: 	""
 modified:   	2015-11-25
-tags: 			[Guest house, Hotel]
+tags: 			[Guest House]
 comments: 		false
 categories: 	portfolio
 link:			http://www.tharu20for7.com/

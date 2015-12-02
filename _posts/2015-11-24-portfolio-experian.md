@@ -4,7 +4,7 @@ title:  		"Experian Business IQ"
 impact: 		""
 description: 	""
 modified:   	2015-11-24
-tags: 			[Website]
+tags: 			[Business]
 comments: 		false
 categories: 	portfolio
 link:			http://www.experian.com/business-information/credit-management-businessiq-demo.html

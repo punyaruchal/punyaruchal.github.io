@@ -4,7 +4,7 @@ title:  		"Migration & Remittance Nepal"
 impact: 		""
 description: 	""
 modified:   	2015-11-22
-tags: 			[Website]
+tags: 			[Informative]
 comments: 		false
 categories: 	portfolio
 link:			http://migrationremittance.org/

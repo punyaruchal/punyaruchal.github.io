@@ -4,7 +4,7 @@ title:  		"Punya's Blog"
 impact: 		""
 description: 	""
 modified:   	2015-08-31
-tags: 			[punya1, blog, personal]
+tags: 			[Portfolio]
 comments: 		false
 categories: 	portfolio
 link:			http://punya.com.np

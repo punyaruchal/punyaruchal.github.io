@@ -4,7 +4,7 @@ title:  		"Bridge Group Consultants"
 impact: 		""
 description: 	""
 modified:   	2015-11-21
-tags: 			[Website]
+tags: 			[Consultants]
 comments: 		false
 categories: 	portfolio
 link:			http://bridgegc.com/

@@ -4,7 +4,7 @@ title:  		"Darnal Award"
 impact: 		""
 description: 	""
 modified:   	2015-11-20
-tags: 			[Website]
+tags: 			[Award and Biography]
 comments: 		false
 categories: 	portfolio
 link:			http://darnalaward.org/

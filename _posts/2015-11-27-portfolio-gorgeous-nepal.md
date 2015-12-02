@@ -4,7 +4,7 @@ title:  		"Gorgeous Nepal"
 impact: 		""
 description: 	""
 modified:   	2015-11-27
-tags: 			[Trakking, Website]
+tags: 			[Travel]
 comments: 		false
 categories: 	portfolio
 link:			http://dev.yipl.com.np/gorgeous-nepal/
