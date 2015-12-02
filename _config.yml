@@ -13,4 +13,8 @@ github_username:  punyaruchal
 # Build settings
 markdown: kramdown
 
+#Browser port, e.g. localhosty:8080
 port: 8080
+
+# Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
+google_analytics: UA-70913950-1
