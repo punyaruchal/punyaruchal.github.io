@@ -521,7 +521,8 @@ section.about{
         width: 45%;
         color: #ffffff;
         p{
-            font-size: 21px;
+            font-size: 18px;
+            line-height: 24px;
             font-weight: 300;
             line-height: 27px;
             //text-align: justify;
@@ -576,6 +577,15 @@ section.what-i-do{
     h1{
         color: #ffffff;
         text-align: center;
+    }
+    .desc-text{
+        font-size: 18px;
+        line-height: 24px;
+        color: #ffffff;
+        max-width: 960px;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 50px;
     }
     .flex-wrapper{
 
@@ -640,7 +650,7 @@ section.what-i-do{
 /* Style for Portfolio
 /*----------------------------------*/
 section.portfolio{
-    background: #00c0d5;
+    background: #3a2f5f;
     padding: 3em 0;
     transition: all 0.3s ease-in-out 0s;
     .page{
@@ -649,6 +659,13 @@ section.portfolio{
     h1{
         text-align: center;
         color: #ffffff;
+    }
+    .desc-text{
+        font-size: 18px;
+        line-height: 24px;
+        color: #ffffff;
+        text-align: center;
+        margin-bottom: 50px;
     }
     .portfolio-content{
         display: flex;
@@ -942,7 +959,11 @@ section.portfolio{
         padding-top: 1em;
         .portfolio-content{
             .item{
-                width: 100%;       
+                width: 100%;
+                margin-bottom: 10px;
+                &:last-child{
+                    margin-bottom: 0;
+                }      
             }
         }
     }
